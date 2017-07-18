@@ -33,7 +33,6 @@ mainModule
         type: $scope.type,
         rating: $scope.rating
       };
-      console.log(data);
       var config = {
         headers : {
           'Content-Type': 'application/json'

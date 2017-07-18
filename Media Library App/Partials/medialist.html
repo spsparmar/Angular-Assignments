@@ -19,7 +19,11 @@
       toggle = "addModefn()"> 
     </div> <br>
   </div>
+</div>
 
+<div class="form-group" ng-if= "editMode">
+  <div edit-media-directive > </div>
+  <br>
 </div>
 
 <div class = "list-group" ng-init= "getList()">
@@ -31,10 +35,6 @@
     </button>
       <div id = "{{media._id}}" class="collapse" >
         <div detail-directive m = media dm = "deleteMediabyId( media._id )" em = "editMedia( media )" > </div>
-        <div class="form-group" ng-if= "editMode">
-          <div edit-media-directive > </div>
-          <br>
-        </div>
       </div>
 
   </ul>
