@@ -1,0 +1,14 @@
+<div>
+<li class="list-group-item"> <b> Category: </b> {{m.category}} </li>
+<li class="list-group-item"> <b> Artist: </b> {{m.artists[0]}} </li>
+<li class="list-group-item"> <b> Type: </b> {{m.type}} </li>
+<li class="list-group-item"> <b> Rating: </b> {{m.rating}} </li>
+<li class="list-group-item">
+  <button type="button" ng-Click = "dm(m.id)" class = "btn btn-danger btn-sm">
+     <span class="glyphicon glyphicon-trash"></span> Delete
+  </button>
+  <button type="button" ng-Click = "em(m)" class = "btn btn-default btn-sm">
+     <span class="glyphicon glyphicon-pencil"></span> Edit
+  </button>
+</li>
+</div>

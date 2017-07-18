@@ -1,0 +1,28 @@
+<form>
+  Title:<br>
+  <input type = "text" ng-model="currentData.title"> <br>
+  Category:<br>
+  <select ng-model="currentData.category">
+    <option value="Classical">Classical</option>
+    <option value="Devotional">Devotional</option>
+    <option value="Pop">Pop</option>
+    <option value="Rock">Rock</option>
+     <option value="Sufi">Sufi</option>
+  </select> <br>
+  Artist: <br>
+  <input type="text" ng-model="currentData.artists[0]" > <br>
+  Type: <br>
+  <select ng-model="currentData.type">
+    <option value="Album">Album</option>
+    <option value="Movie">Movie</option>
+    <option value="Single">Single</option>
+  </select> <br>
+  Rating: <br>
+  <input type="number" min="0" max="5" ng-model = "currentData.rating" > <br>
+  <button type = "submit" ng-click="updateMedia(currentData)" class = "btn btn-success btn-sm">
+    <span class="glyphicon glyphicon-ok"></span> Update
+  </button>
+  <button type = "button" ng-click="editModeCancel()" class = "btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-remove"></span> Cancel
+  </button>
+</form>
