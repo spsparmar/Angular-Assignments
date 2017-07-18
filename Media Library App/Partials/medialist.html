@@ -1,0 +1,41 @@
+<div>
+<h3> List of All Media Available </h3>  
+  <button type="button" ng-Click = "getList()" class = "btn btn-default btn-sm"> 
+  <span class="glyphicon glyphicon-refresh"></span> Refresh
+  </button>
+  <button type="button" ng-Click = "addModefn()" class = "btn btn-succes btn-sm" >
+    <span class="glyphicon glyphicon-plus"></span> {{addModeButtonName}} 
+  </button>
+
+  <div class="form-group" ng-if= "addMode" >
+    <div 
+      add-media-directive 
+      title = "$parent.title"
+      category = "$parent.category"
+      artists = "$parent.artists"
+      type = "$parent.type"
+      rating = "$parent.rating"
+      post = "postList()"
+      toggle = "addModefn()"> 
+    </div> <br>
+  </div>
+
+</div>
+
+<div class = "list-group" ng-init= "getList()">
+  <h2 style="color:red;"> {{msg}} </h2>
+  <ul ng-repeat = "media in mediaData">
+
+    <button type = "button" data-toggle="collapse" data-target="#{{media._id}}" class="btn btn-default btn-lg btn-block">     
+      <font size="2"> {{media.title}} </font>
+    </button>
+      <div id = "{{media._id}}" class="collapse" >
+        <div detail-directive m = media dm = "deleteMediabyId( media._id )" em = "editMedia( media )" > </div>
+        <div class="form-group" ng-if= "editMode">
+          <div edit-media-directive > </div>
+          <br>
+        </div>
+      </div>
+
+  </ul>
+</div>

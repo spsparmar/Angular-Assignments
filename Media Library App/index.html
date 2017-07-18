@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title> Users </title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"> </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src= "app.js"> </script>
+    <script src= "Directives/detailDirective.js"> </script>
+    <script src= "Directives/addMediaDirective.js"> </script>
+    <script src= "Directives/editMediaDirective.js"> </script>
+    <script src= "Controllers/mediaListController.js"> </script>
+    <script src= "Controllers/indexController.js"> </script>
+    <script src= "Services/configService.js"> </script>
+    <script src= "Services/getService.js"> </script>
+    <script src= "Services/postService.js"> </script>
+    <script src= "Services/deleteService.js"> </script>
+    <script src= "Services/getByIdService.js"> </script>
+    <script src= "Services/putService.js"> </script>
+  </head>
+  <body ng-app = "myModule">
+    <div ng-controller = "indexController">
+      <h2> Welcome to Media Library </h2>
+      <input type="button" value = {{buttonName}} ng-Click = "toggleFn()" class = "btn btn-primary"/>
+      <main ng-view class="panel panel-default"> </main>
+    </div>
+  </body>
+</html>

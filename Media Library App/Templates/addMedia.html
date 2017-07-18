@@ -1,0 +1,31 @@
+<div class="form-group">
+  <form>
+    Title:<br>
+    <input type = "text" required ng-model="title"> <br>
+    Category:<br>
+    <select required ng-model="category">
+      <option value="Classical">Classical</option>
+      <option value="Devotional">Devotional</option>
+      <option value="Pop">Pop</option>
+      <option value="Rock">Rock</option>
+       <option value="Sufi">Sufi</option>
+    </select> <br>
+    Artist: <br>
+    <input type="text" required ng-model="artists" > <br>
+    Type: <br>
+    <select required ng-model="type">
+      <option value="Album">Album</option>
+      <option value="Movie">Movie</option>
+      <option value="Single">Single</option>
+    </select> <br>
+    Rating: <br>
+    <input type="number" min="0" max="5" ng-model = "rating" > <br>
+
+    <button type = "submit" ng-click="post()" class = "btn btn-success btn-sm">
+      <span class="glyphicon glyphicon-ok"></span> Submit
+    </button>
+    <button type = "button" ng-click="toggle()" class = "btn btn-default btn-sm">
+      <span class="glyphicon glyphicon-remove"></span> Cancel
+    </button>
+  </form> <br>
+</div>
